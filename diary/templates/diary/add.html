@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <a href="{% url 'diary:index' %}">kembali ke index</a>
+    <form action="{% url 'diary:add' %}" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+    <input type="submit" value ="tulis">
+    </form>
+    
+</body>
+
+
+</html>

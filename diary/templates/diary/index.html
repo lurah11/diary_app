@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Diary KU</h1>
+        <div style="text-align: right">
+            <a  href="{% url 'weather:weather-view' %}">CEK CUACA HARI INI</a>
+        </div>
+        
+        <br>
+        <a href="{% url 'diary:add' %}">tambah inputan diary</a>
+        {% for entry in entries %}
+        <p style="color:blue"><strong>{{forloop.counter}}.{{entry.date}}</strong></p>
+        <p>{{entry.text}}</p>
+        {% endfor %}
+    </body>
+</html>
