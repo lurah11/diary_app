@@ -1,1 +1,1 @@
-web: waitress diary_app.wsgi --log-file - 
+web: gunicorn diary_app.wsgi --log-file - 
